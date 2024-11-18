@@ -1,8 +1,8 @@
 {
   "tauri": {
     "bundle": {
-      "icon": ["png/weread_512.png"],
-      "identifier": "com.pake.weread",
+      "icon": ["png/outline_512.png"],
+      "identifier": "com.acceleai.docs",
       "active": true,
       "category": "DeveloperTool",
       "copyright": "",

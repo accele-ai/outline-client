@@ -15,6 +15,7 @@ use window::build_window;
 
 #[cfg(target_os = "macos")]
 use std::time::Duration;
+use window_vibrancy::{self, NSVisualEffectMaterial};
 
 pub fn run_app() {
     let (pake_config, tauri_config) = get_pake_config();
@@ -43,6 +44,19 @@ pub fn run_app() {
         ])
         .setup(move |app| {
             let _window = build_window(app, pake_config, data_dir);
+
+            #[cfg(target_os = "macos")]
+            {
+                // _window.set_decorations(false).unwrap();
+                // _window.set_shadow(true).unwrap();
+                // window_vibrancy::apply_vibrancy(
+                //     &_window,
+                //     NSVisualEffectMaterial::WindowBackground,
+                //     None,
+                //     Some(10.0)
+                // ).expect("Failed to apply vibrancy");
+            }
+
             _window.show().unwrap();
             if !activation_shortcut.is_empty() {
                 let app_handle = app.app_handle().clone();

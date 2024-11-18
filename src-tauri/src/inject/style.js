@@ -414,6 +414,10 @@ window.addEventListener('DOMContentLoaded', _event => {
         height: 0px;
       }
     }
+      
+    #root > div > div > span > div > div:first-child {
+      padding-top: 25px;
+    }
   `;
   const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
   if (window['pakeConfig']?.hide_title_bar && isMac) {

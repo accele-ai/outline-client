@@ -1,6 +1,6 @@
 {
   "package": {
-    "productName": "WeRead",
+    "productName": "AcceleAI Docs",
     "version": "1.0.0"
   },
   "tauri": {
@@ -8,8 +8,10 @@
       "csp": null,
       "dangerousRemoteDomainIpcAccess": [
         {
-          "domain": "weread.qq.com",
-          "windows": ["pake"],
+          "domain": "docs.acceleai.com",
+          "windows": [
+            "pake"
+          ],
           "enableTauriAPI": true
         }
       ]
@@ -25,7 +27,9 @@
       "all": true,
       "fs": {
         "all": true,
-        "scope": ["$DOWNLOAD/*"]
+        "scope": [
+          "$DOWNLOAD/*"
+        ]
       }
     }
   },
